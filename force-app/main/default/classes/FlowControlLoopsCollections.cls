@@ -29,7 +29,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        String result = null;
+        if (x > y){
+            result = 'Hello world';
+        } else if (x == null || y == null || x < y){
+            result = null;
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
