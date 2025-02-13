@@ -69,8 +69,17 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = null;
+        if (num1 == null || num2 == null){
+            largestNum = null;
+        } else if (num1 > num2){
+            largestNum = num1;
+        } else if (num1 == num2){
+            largestNum = num1;
+        } else {
+            largestNum = num2;
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return largestNum; // Replace null with the variable you used to store the result
     }
 
 
