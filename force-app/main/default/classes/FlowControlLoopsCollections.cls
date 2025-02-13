@@ -30,9 +30,9 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String helloWorld(Integer x, Integer y) {
         String result = null;
-        if (x > y){
+        if (x > y) {
             result = 'Hello world';
-        } else if (x == null || y == null || x < y){
+        } else if (x == null || y == null || x < y) {
             result = null;
         }
         return result; // Replace null with the variable you used to store the result
@@ -49,9 +49,9 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Boolean votingEligibility(Integer age) {
         Boolean eligibility = false;
-        if (age >= 18){
+        if (age >= 18) {
             eligibility = true;
-        }else if (age == null){
+        }else if (age == null) {
             eligibility = false;
         }
         return eligibility; // Replace null with the variable you used to store the result
@@ -69,13 +69,13 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = null;
-        if (num1 == null || num2 == null){
+        if (num1 == null || num2 == null) {
             largestNum = null;
-        } else if (num1 > num2){
+        } else if (num1 > num2) {
             largestNum = num1;
-        } else if (num1 == num2){
+        } else if (num1 == num2) {
             largestNum = num1;
-        } else {
+        } else if (num2 > num1) {
             largestNum = num2;
         }
 
@@ -92,7 +92,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String myNumSign = null;
+        if (a = null) {
+            myNumSign = null;
+        } else if (a > 0) {
+            myNumSign = 'Positive';
+        } else if (a < 0) {
+            myNumSign = 'Negative';
+        } else if (a == 0) {
+            myNumSign = 'Zero';
+        }
+
+        return myNumSign; // Replace null with the variable you used to store the result
     }
 
     /**
