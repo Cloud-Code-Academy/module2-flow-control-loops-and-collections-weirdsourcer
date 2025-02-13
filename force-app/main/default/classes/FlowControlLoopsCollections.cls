@@ -93,13 +93,13 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String checkNumber(Integer a) {
         String myNumSign = null;
-        if (a = null) {
+        if (a == null) {
             myNumSign = null;
         } else if (a > 0) {
             myNumSign = 'Positive';
         } else if (a < 0) {
             myNumSign = 'Negative';
-        } else if (a == 0) {
+        } else {
             myNumSign = 'Zero';
         }
 
