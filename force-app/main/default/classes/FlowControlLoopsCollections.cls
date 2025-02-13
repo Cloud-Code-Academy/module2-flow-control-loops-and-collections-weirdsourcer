@@ -51,6 +51,8 @@ public with sharing class FlowControlLoopsCollections {
         Boolean eligibility = false;
         if (age >= 18){
             eligibility = true;
+        }else if (age == null){
+            eligibility = false;
         }
         return eligibility; // Replace null with the variable you used to store the result
     }
