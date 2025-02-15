@@ -183,8 +183,10 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumUpToLimit(Integer intLimit) {
         Integer mySum = 0;
-        for (Integer num : intLimit) {
+        for (/*Integer num = 1; num < intLimit + 1; num++*/ 
+            Integer num = intLimit; num > 0; num--) {
             mySum += num;
+            //System.debug('iteration: ' + num + ', current sum: ' + mysum);
         }    
 
         return mySum; // Replace null with the variable you used to store the result
@@ -198,15 +200,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String returnHelloWorld() {
         // Initialize the result String
+        String myStringCombo = '';
+        // Use a for loop to append 'Hello World!;' to the result string three times 
+         for (Integer num = 0; num < 3; num++){
+            myStringCombo += 'Hello World!; ';
+           // System.debug(num);
+           // System.debug('itr myStringCombo +=: ' + myStringCombo);
 
-        // Use a for loop to append 'Hello World!;' to the result string three times
-        /* 
-         for (){
-            
          }
-        */
 
-        return null; // Replace null with the variable you used to store the result
+        return myStringCombo; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -221,17 +224,22 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static String repeatString(String inputString, Integer repeatCount) {
         // Initialize the result String
+        String myStringCombo = '';
 
         // Use a for loop to append the inputString to the result string repeatCount times
-        /*
-        for () {
+        
+        for (Integer str = 0; str < repeatCount; str++) {
+            myStringCombo += 'Hello World!';
 
             // If it is not the last iteration, add a semicolon to separate the strings
+            if (str == repeatCount -1) {
+                myStringCombo += ';';
+            }
         }
-        */
+        
 
         // Return the final result string
-        return null; // Replace null with the variable you used to store the result
+        return myStringCombo; // Replace null with the variable you used to store the result
     }
 
     /**
