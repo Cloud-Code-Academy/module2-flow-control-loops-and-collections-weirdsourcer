@@ -137,7 +137,7 @@ public with sharing class FlowControlLoopsCollections {
         String myString = null;
         if (a == null) {
             myString = 'Null';
-        } if (a == '') {
+        } else if (a == '') {
             myString = 'Empty';
         } else {
             myString = 'Contains Text';
