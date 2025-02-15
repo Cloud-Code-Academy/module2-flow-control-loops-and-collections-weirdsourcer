@@ -229,11 +229,11 @@ public with sharing class FlowControlLoopsCollections {
         // Use a for loop to append the inputString to the result string repeatCount times
         
         for (Integer str = 0; str < repeatCount; str++) {
-            myStringCombo += 'Hello World!';
+            myStringCombo += inputString;
 
             // If it is not the last iteration, add a semicolon to separate the strings
-            if (str == repeatCount -1) {
-                myStringCombo += ';';
+            if (str < repeatCount-1) {
+                myStringCombo += '; ';
             }
         }
         
