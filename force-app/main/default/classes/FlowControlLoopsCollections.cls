@@ -250,14 +250,21 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
+        List<Integer> myNumList = new List<Integer>() ;
 
         // Add the integers 1, 2, and 3 to the list
         // add 1
+        myNumList.add(1);
+        system.debug(myNumList);
         // add 2
+        myNumList.add(2);
+        system.debug(myNumList);
         // add 3
+        myNumList.add(3);
+        system.debug(myNumList);
 
         // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return myNumList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -271,9 +278,9 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
         // Remove the 3rd element (number 3) from the list
-        
+        numberList.remove(2);
         // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        return numberList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -285,14 +292,15 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createIntegerList(Integer n) {
         // Create a new list of integers 
+        List<Integer> myInteger = new List<Integer>();
 
-        /*
-        for() {
+        
+        for(Integer num = 1; num <= n; num++) {
             //add integer to the list
+            myInteger.add(num);
         }
-        */ 
-
-        return null; // Replace null with the variable you used to store the result
+        
+        return myInteger; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -308,8 +316,11 @@ public with sharing class FlowControlLoopsCollections {
         Set<String> stringSet = new Set<String>();
 
         //add strings to the set
+        for (String i : inputList) {
+            stringSet.add(i);
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return stringSet; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -320,12 +331,21 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
+        Integer sumOfpositive = 0;
 
         // Loop through the list of integers
+        for (Integer i = 0; i < numbers.size() ; i++) {
+            Integer num = numbers[i];
+            System.debug(num);
+            if (num >= 0) {
+                sumOfpositive += num;
+            }
+            system.debug(sumOfpositive);
+        }
             // if the number is negative skip this iteration
         
 
-        return null; // Replace null with the variable you used to store the result
+        return sumOfpositive; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -338,11 +358,29 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
+        System.debug('words: ' + words);
+        Integer wordPos;
+        System.debug('WordPos: ' + wordPos);
+        String word;
+        System.debug('word: ' + word);
 
         // Loop through the list of words
+        for (Integer i = 0; i < words.size(); i++) {
+            System.debug('WordPos: ' + wordPos);
+            word = words[i];
+            System.debug('word: ' + word + ' , wordToFind: ' + wordToFind);
             // If the current word is the word to find, exit the loop
+            if (wordToFind != word) {
+                wordPos = -1;
+            } else if (wordToFind == word) {
+                wordPos = i;
+                break;                
+            }
 
-        return null; // Replace null with the variable you used to store the result
+        }
+            
+
+        return wordPos; // Replace null with the variable you used to store the result
     }
 
     /**
