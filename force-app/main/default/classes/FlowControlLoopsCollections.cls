@@ -118,7 +118,7 @@ public with sharing class FlowControlLoopsCollections {
         String divisibility = null;
         if (a == null) {
             divisibility = null;
-        } else if (math.mod(a, 2) > 0) {
+        } else if (math.mod(a, 2) == 0) {
             divisibility = 'Even';
         } else {
             divisibility = 'Odd';
