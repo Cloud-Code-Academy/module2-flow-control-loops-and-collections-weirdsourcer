@@ -393,8 +393,16 @@ public with sharing class FlowControlLoopsCollections {
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
+        Decimal sumSoFar = 0;
+        for (Integer i = 0; i < moneyInWallet.size(); i++) {
+            sumSoFar += moneyInWallet[i];
+            System.debug('sumSofar: ' + sumSoFar);
+            if (sumSoFar > 40) {
+                break;
+            }
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        return sumSoFar; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -405,15 +413,21 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Map<String, Integer> addItemsToMap() {
         // Initialize an empty Map
+        Map<String, Integer> fruit = new Map<String, Integer>();
 
         // Add key-value pairs to the Map
         // add Apples => 5
+        fruit.put('Apples', 5);
         // add Oranges => 10
+        fruit.put('Oranges', 10);
         // add Bananas => 15
+        fruit.put('Bananas', 15);
         // add Pears => 20
+        fruit.put('Pears', 20);
         // add Grapes => 25
+        fruit.put('Grapes', 25);
 
-        return null; // Replace null with the variable you used to store the result
+        return fruit; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -427,17 +441,23 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
+        Map<String, Integer> salary = new Map<String, Integer>();
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        salary.put('John Doe', 50000);
         // add Jane Smith => 60000
+        salary.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        salary.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        salary.put('Alice Johnson', 65000);
 
         // Get the salary of the employee
+        Integer employeeSalary = salary.get(employeeName);
 
         // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return employeeSalary; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -456,18 +476,27 @@ public with sharing class FlowControlLoopsCollections {
 
         // Add key-value pairs to the Map
         // add John Doe => 50000
+        employeeSalaries.put('John Doe', 50000);
         // add Jane Smith => 60000
+        employeeSalaries.put('Jane Smith', 60000);
         // add Sam Brown => 55000
+        employeeSalaries.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
+        employeeSalaries.put('Alice Johnson', 65000);
 
         // Initialize a list to store the names of high paid employees
-
+        List<String> employeeName = new List<String>();
+        
         // Iterate over the Map using a for loop
+        for (String name : employeeSalaries.keySet()) {
             // Check if the salary of the employee is more than 55000
+            if (employeeSalaries.get(name) > 55000) {
                 // Add the employee to the list of high paid employees
-
+                employeeName.add(name);
+            }
+        }
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return employeeName; // Replace null with the variable you used to store the result
     }
 
 }
