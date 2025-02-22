@@ -255,13 +255,13 @@ public with sharing class FlowControlLoopsCollections {
         // Add the integers 1, 2, and 3 to the list
         // add 1
         myNumList.add(1);
-        system.debug(myNumList);
+        //system.debug(myNumList);
         // add 2
         myNumList.add(2);
-        system.debug(myNumList);
+        //system.debug(myNumList);
         // add 3
         myNumList.add(3);
-        system.debug(myNumList);
+       // system.debug(myNumList);
 
         // Return the populated list
         return myNumList; // Replace null with the variable you used to store the result
@@ -336,11 +336,11 @@ public with sharing class FlowControlLoopsCollections {
         // Loop through the list of integers
         for (Integer i = 0; i < numbers.size() ; i++) {
             Integer num = numbers[i];
-            System.debug(num);
+           // System.debug(num);
             if (num >= 0) {
                 sumOfpositive += num;
             }
-            system.debug(sumOfpositive);
+            //system.debug(sumOfpositive);
         }
             // if the number is negative skip this iteration
         
@@ -358,17 +358,17 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
-        System.debug('words: ' + words);
+        //System.debug('words: ' + words);
         Integer wordPos;
-        System.debug('WordPos: ' + wordPos);
+        //System.debug('WordPos: ' + wordPos);
         String word;
-        System.debug('word: ' + word);
+        //System.debug('word: ' + word);
 
         // Loop through the list of words
         for (Integer i = 0; i < words.size(); i++) {
-            System.debug('WordPos: ' + wordPos);
+            //System.debug('WordPos: ' + wordPos);
             word = words[i];
-            System.debug('word: ' + word + ' , wordToFind: ' + wordToFind);
+            //System.debug('word: ' + word + ' , wordToFind: ' + wordToFind);
             // If the current word is the word to find, exit the loop
             if (wordToFind != word) {
                 wordPos = -1;
@@ -396,7 +396,7 @@ public with sharing class FlowControlLoopsCollections {
         Decimal sumSoFar = 0;
         for (Integer i = 0; i < moneyInWallet.size(); i++) {
             sumSoFar += moneyInWallet[i];
-            System.debug('sumSofar: ' + sumSoFar);
+            //System.debug('sumSofar: ' + sumSoFar);
             if (sumSoFar > 40) {
                 break;
             }
