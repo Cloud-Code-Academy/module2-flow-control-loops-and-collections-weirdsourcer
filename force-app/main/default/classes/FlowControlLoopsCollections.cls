@@ -319,8 +319,8 @@ public with sharing class FlowControlLoopsCollections {
 
        /*
         //add strings to the set
-        for (String i : inputList) {
-            stringSet.add(i);
+        for (String input : inputList) {
+            stringSet.add(input);
         }
         */
 
