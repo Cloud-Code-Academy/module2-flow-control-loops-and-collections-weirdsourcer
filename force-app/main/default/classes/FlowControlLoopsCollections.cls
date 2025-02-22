@@ -446,8 +446,9 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
-        Map<String, Integer> salary = new Map<String, Integer>();
+        Map<String, Integer> salary = new Map<String, Integer>{'John Doe' => 50000, 'Jane Smith' => 60000, 'Sam Brown' => 55000, 'Alice Johnson' => 65000};
 
+        /*
         // Add key-value pairs to the Map
         // add John Doe => 50000
         salary.put('John Doe', 50000);
@@ -457,6 +458,7 @@ public with sharing class FlowControlLoopsCollections {
         salary.put('Sam Brown', 55000);
         // add Alice Johnson => 65000
         salary.put('Alice Johnson', 65000);
+        */
 
         // Get the salary of the employee
         Integer employeeSalary = salary.get(employeeName);
