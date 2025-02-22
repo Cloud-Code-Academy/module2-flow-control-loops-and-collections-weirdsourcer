@@ -250,9 +250,10 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
-        List<Integer> myNumList = new List<Integer>() ;
+        List<Integer> myNumList = new List<Integer>{1, 2, 3};
 
-        // Add the integers 1, 2, and 3 to the list
+        /* 
+        Add the integers 1, 2, and 3 to the list
         // add 1
         myNumList.add(1);
         //system.debug(myNumList);
@@ -262,6 +263,7 @@ public with sharing class FlowControlLoopsCollections {
         // add 3
         myNumList.add(3);
        // system.debug(myNumList);
+       */
 
         // Return the populated list
         return myNumList; // Replace null with the variable you used to store the result
